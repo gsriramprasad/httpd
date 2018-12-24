@@ -1,6 +1,6 @@
-FROM centos:6.6
+FROM centos:latest
 
-RUN apt-get install apache2 -y
+RUN yum -y install httpd -y
 
 COPY ./public-html/ /var/www/html/
 
