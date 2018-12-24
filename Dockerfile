@@ -5,5 +5,4 @@ RUN service apache2 restart
 COPY ./public-html/ /var/www/html/
 EXPOSE 80 
 RUN /bin/bash -c "source /etc/apache2/envvars"
-ENTRYPOINT ["/bin/bash"]
-
+CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
