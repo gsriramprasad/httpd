@@ -5,5 +5,5 @@ CMD source /etc/apache2/envvars
 RUN service apache2 restart
 COPY ./public-html/ /var/www/html/
 EXPOSE 80 
-ENTRYPOINT ["/usr/sbin/apache2", "-D", "FOREGROUND"]
+ENTRYPOINT ["apache2ctl", "-D", "FOREGROUND"]
 
