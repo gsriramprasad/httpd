@@ -1,9 +1,9 @@
 FROM centos:6.6
 
-RUN yum install -y httpd
+RUN sudo apt-get install apache2 -y
 
-COPY ./public-html/ /usr/local/apache2/htdocs/
+COPY ./public-html/ /var/www/html/
 
-ENTRYPOINT ["/usr/sbin/httpd", "-D", "FOREGROUND"]
+CMD [“/usr/sbin/httpd”, “-D”, “FOREGROUND”]
 
 
