@@ -2,9 +2,9 @@ FROM httpd:2.4
 
 ADD ./ /code/
 
-COPY ./public-html/ /usr/local/apache2/htdocs/
+#WORKDIR /code
 
-WORKDIR /code
+COPY ./public-html/ /usr/local/apache2/htdocs/
 
 RUN ls -la
 
