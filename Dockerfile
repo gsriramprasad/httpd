@@ -5,7 +5,7 @@ RUN apt -y install apache2-utils
 RUN apt -y clean
 COPY ./public-html/ /var/www/html/
 EXPOSE 80 
-CMD [“apache2ctl”, “-D”, “FOREGROUND”]
+CMD ["/usr/sbin/apache2", "-D", "FOREGROUND"]
 
 
 
