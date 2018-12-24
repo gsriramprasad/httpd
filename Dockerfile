@@ -4,7 +4,4 @@ RUN yum install -y httpd
 
 COPY ./public-html/ /usr/local/apache2/htdocs/
 
-EXPOSE 80
-
-ENTRYPOINT ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 
